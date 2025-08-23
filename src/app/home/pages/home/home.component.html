@@ -1,2 +1,7 @@
-<app-home-header />
-<app-home-body />
+<app-home-header [inputDato]="dato"/>
+<app-home-body (outputData)="eventMessage($event)"
+               (outputNumber)="eventNumero($event)"/>
+
+<p>
+    {{contenido}}
+</p>
