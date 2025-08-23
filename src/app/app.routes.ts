@@ -13,6 +13,11 @@ export const routes: Routes = [
     loadComponent: () => import('./user/pages/user/user.component'),
 },
 {
+    path:'usersQuery/:id/name/:type',
+    title:'App | Users',
+    loadComponent: () => import('./user/pages/user/user.component'),
+},
+{
     path:'*',
     redirectTo:'shiba',
 }

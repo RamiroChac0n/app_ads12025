@@ -13,7 +13,7 @@ import { MatButtonModule } from '@angular/material/button';
 export class HomeHeaderComponent implements OnInit{
   // Propiedades del componente
   @Input() inputDato!:String;
-  @Input() inputNumero!:number;
+  @Input() miNumero!:number;
   public dato:String = 'Hola mundo';
   public contador:number = 0;
 
