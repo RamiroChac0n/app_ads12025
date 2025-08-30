@@ -1,11 +1,13 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { UserService } from '../../services/user.service';
+import {MatCardModule} from '@angular/material/card';
+import { Object } from '../../interfaces/object';
 
 @Component({
   selector: 'app-user',
   standalone: true,
-  imports: [],
+  imports: [MatCardModule],
   templateUrl: './user.component.html',
   styleUrl: './user.component.scss'
 })
@@ -13,6 +15,9 @@ export default class UserComponent implements OnInit {
 
   private readonly activeRoute = inject(ActivatedRoute);
   private readonly userService = inject(UserService);
+
+  // public 
+  public data:Object[] = [];
 
   constructor() {}
 
@@ -26,15 +31,13 @@ export default class UserComponent implements OnInit {
   }
   getUsers(){
     this.userService.get().subscribe({
-      next:(data)=>{
-        console.log(data);
+      next:(res)=>{
+        this.data = [...res]
       },
       error:(error)=>{
         console.log(error);
       },
-      complete:()=>{
-        console.log('complete');
-      }
+      complete:()=>{}
     });
   }
 }

@@ -1,1 +1,11 @@
-<p>user works!</p>
+@for (item of this.data; track $index) {
+  <mat-card appearance="raised">
+    <mat-card-header>
+      <mat-card-title>{{ item.name }}</mat-card-title>
+      <mat-card-subtitle>{{item.id}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eos iste, laborum excepturi officiis maiores alias hic adipisci, ut architecto animi ipsam eaque ea quibusdam voluptates. Ea distinctio esse quidem sunt, iste praesentium sed libero commodi unde doloremque sit atque nemo quis ipsa! Nisi officiis corrupti in, numquam ut blanditiis eius ipsam veniam. Perferendis libero quae ipsa autem unde nostrum pariatur deleniti possimus totam commodi consectetur minima provident, natus debitis voluptate dicta sunt placeat explicabo ducimus cupiditate nam. A tenetur quas consectetur doloremque odit atque placeat hic suscipit, iusto, eius enim odio impedit ipsam quia cupiditate fugit repellendus quisquam accusantium.
+    </mat-card-content>
+  </mat-card>
+}
