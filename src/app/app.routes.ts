@@ -1,8 +1,7 @@
 import { Routes } from '@angular/router';
-import { title } from 'node:process';
 
 export const routes: Routes = [
-{    
+{
     path:'shiba',
     title:'App | Home',
     loadComponent: () => import('./home/pages/home/home.component'),
@@ -16,6 +15,11 @@ export const routes: Routes = [
     path:'usersQuery/:id/name/:type',
     title:'App | Users',
     loadComponent: () => import('./user/pages/user/user.component'),
+},
+{
+    path:'phones',
+    title:'App | Phones',
+    loadComponent: () => import('./phone/pages/phones/phones.component'),
 },
 {
     path:'*',

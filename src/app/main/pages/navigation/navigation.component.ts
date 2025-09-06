@@ -48,6 +48,11 @@ export default class NavigationComponent {
         route: '/shiba',
         icon: 'groups',
         name: 'shiba'
+      },
+      {
+        route: '/phones',
+        icon: 'phone_enabled',
+        name: 'Phones'
       }
     ] 
 
